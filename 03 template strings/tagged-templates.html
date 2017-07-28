@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="app"></div>
+
+	
+
+<script>
+
+	function highlight(strings, ...values) {
+		let str = '';
+		strings.forEach((string, i) => {
+			str += `${string} <span class="hl" contenteditable>${values[i] || ''}</span>`;
+		});
+		return str;
+	}
+
+	const name = 'Snickers';
+	const age = 100;
+
+	const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
+
+	document.getElementById('app').innerHTML = sentence;
+</script>
+</body>
+</html>

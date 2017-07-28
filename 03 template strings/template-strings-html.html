@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="app"></div>
+
+<script>
+	const person = {
+		name: 'Levi',
+		job: 'Web Developer',
+		city: 'Springfield',
+		bio: `${this.name} is a really cool guy that loves to teach web development!`
+	}
+
+	const markup = `
+		<div class="person">
+			<h2>
+				${person.name}
+				<span class="job">${pesron.job}</span>
+			</h2>
+			<p class="location">${person.location}</p>
+			<p class="bio">${person.bio}</p>
+		</div>
+	`;
+
+	document.getElementById('app').innerHTML = markup;
+</script>
+</body>
+</html>
