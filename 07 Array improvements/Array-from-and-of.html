@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div class="people">
+		<p>Levi</p>
+		<p>Andrew</p>
+		<p>Jessica</p>
+	</div>
+
+<script>
+	const people = document.querySelectorAll('.people > p');
+	const names = Array.from(people, person => person.textContent);
+
+	function sumAll() {
+		return Array.from(arguments)
+			.reduce((sum, num) => sum + num, 0);
+	}
+
+	console.log(sumAll(2, 34, 234, 234, 54, 54));
+
+	const ages = Array.of(12, 4, 23);
+</script>
+</body>
+</html> 

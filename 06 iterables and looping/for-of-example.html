@@ -6,9 +6,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+	<p>Hi i'm p 01</p>
+	<p>Hi i'm p 02</p>
+	<p>Hi i'm p 03</p>
+	<p>Hi i'm p 04</p>
+	<p>Hi i'm p 05</p>
+	<p>Hi i'm p 06</p>
+	<p>Hi i'm p 07</p>
+	<p>Hi i'm p 08</p>
+	<p>Hi i'm p 09</p>
+	<p>Hi i'm p 10</p>
 <script>
+	const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
 
+	for (const [i, cut] of cuts.entries()) {
+		console.log(`${cut} is the ${i} item`);
+	}
+
+	function addUpNumbers() {
+		let total = 0;
+		for (const num of arguments) {
+			total += num;
+		}
+		return total;
+	}
+
+	const name = 'Levi Zitting';
+
+	for(const char of name) {
+		console.log(char)
+	}
+
+	const pEls = document.querySelectorAll('p');
+	for(const p of pEls) {
+		console.log(p)
+	}
 </script>
 </body>
 </html> 
