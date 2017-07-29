@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="bio"></div>
+
+	
+
+<script>
+	const dict = {
+		HTML: 'Hyper Text Markup Language',
+		CSS : 'Cascading Style Sheets',
+		JS: 'JavasScript'
+	}
+
+	function addAbreviations(strings, ...values) {
+		const abbreviated = values.map(value => {
+			if(dict[value]) {
+				return `<abbr title="${dict[value]}">${value}</abbr>`
+			}
+			return value;
+		})
+
+		return strings.reduce((sentence, string, i) => {
+			return `${sentence}${string}${abbreviated[i] || ''}`
+		}, '')
+	}
+
+	const first = 'Levi';
+	const last = 'Zitting';
+	const sentence = addAbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'} ${'CSS'} and ${'JS'}`;
+
+	const bio = document.querySelector('#bio');
+	const p = document.createElement('p');
+	p.innerHTML = sentence;
+	bio.appendChild(p);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+	const person = {
+		first: 'Levi',
+		last: 'Zitting',
+		country: 'USA',
+		city: 'Springfield',
+		twitter: '@levi_zitting'
+	};
+
+	const {first, last} = person;
+
+	const levi = {
+		first: 'Levi',
+		last: 'Zitting',
+		links: {
+			social: {
+				twitter: '@levi_zitting',
+				facebook: 'levi.zitting'
+			},
+			web: {
+				blog: 'levizitting.com/blog'
+			}
+		}
+	};
+
+	const {facebook:fb, twitter:tweet } = levi.links.social;
+
+	const settings = {width: 300, color: 'black'}
+	const {width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+</script>
+</body>
+</html>

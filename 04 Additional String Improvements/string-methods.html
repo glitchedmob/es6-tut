@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+	const coures = 'RFB2';
+	const flightNumbers = '20-AC2018-jz';
+	const accountNumber = '825242631RT0001';
+
+	const make = 'BMW';
+	const model = 'x5';
+	const colour = 'Royal Blue';
+
+	course.startsWith('RFB'); // True
+	flightNumbers.startsWith('AC', 3); // True
+
+	flightNumbers.endsWith('jz'); // True
+	accountNumber.endsWith('RT', 11) // True
+
+	flightNumbers.includes('AC');
+	
+	function leftPad(string, length = 20) {
+		return `${' '.repeat(length - string.length)}${string}`;
+	}
+	
+	console.log(leftPad(make));
+	console.log(leftPad(model));
+	console.log(leftPad(colour));
+
+</script>
+</body>
+</html>
