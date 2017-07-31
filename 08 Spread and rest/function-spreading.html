@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div class="people">
+		<p>Levi</p>
+		<p>Andrew</p>
+		<p>Jessica</p>
+	</div>
+
+<script>
+	const inventors = ['Einstien', 'Newton', 'Galileo'];
+	const newInventors = ['Musk', 'Jobs'];
+
+	inventors.push(...newInventors);
+
+	const name = 'Levi Zitting';
+
+	function sayHi(first, last) {
+		console.log(`Hey there ${first} ${last}`)
+	}
+
+	sayHi(...name.split(' '));
+</script>
+</body>
+</html> 
