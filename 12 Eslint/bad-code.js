@@ -48,4 +48,3 @@ if (!Array.prototype.includes) {
 /* eslint-enable */
 const test = 'test';
 console.log(test);
-

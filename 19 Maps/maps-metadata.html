@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<button>Snakes</button>
+	<button>Cry</button>
+	<button>Ice Cream</button>
+	<button>Flamin'</button>
+	<button>Dancer</button>
+<script>
+	const clickCounts = new Map();
+
+	const buttons = document.querySelectorAll('button');
+	buttons.forEach(button => {
+		clickCounts.set(button, 0);
+		button.addEventListener(click, function() {
+			const val = clickCounts.get(this);
+			clickCounts.set(this, val + 1);
+		});
+	});
+</script>
+</body>	
+</html>  

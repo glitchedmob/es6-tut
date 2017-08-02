@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+	let dog1 = {name: 'Smores'}
+	let dog2 = {name: 'Snickers'}
+
+	const strong = new Map();
+	const weak = new WeakMap();
+
+	strong.set(dog1, 'Smores is the best');
+	weak.set(dog2, 'Snickers is the 2nd best');
+
+	dog1 = null;
+	dog2 = null;
+</script>
+</body>	
+</html>  

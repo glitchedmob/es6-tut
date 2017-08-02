@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+	function Dog(name, breed) {
+		this.name = name;
+		this.breed = breed;
+	}
+
+	Dog.prototype.bark = function() {
+		console.log(`Bark Bark! My name is ${this.name}`);
+	}
+
+	const snickers = new Dog('Smores', 'King Charles');
+
+	Dog.prototype.bark = function() {
+		console.log(`Bark Bark! My name is ${this.name}, and I'm a ${this.breed}`);
+	}
+
+</script>
+</body>
+				
+</html> 

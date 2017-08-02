@@ -1,7 +1,7 @@
-import {apiKey as key, url, sayHi} from './src/config'
+import User, {createUrl, gravatar} from './src/user';
 
-const ages = [1, 4, 5, 6, 4, 28];
-
-sayHi(url);
-
-console.log(apiKey, url);
+const levi = new User('levi-zitting', 'levizitting5663@gmail.com', 'leviztting.com');
+const profile = createUrl(levi.name);
+const image = gravatar(levi.email);
+console.log(levi.email);
+console.log(profile, image);
